@@ -367,6 +367,7 @@ const whatwgFetch = (function(self) {
 
   var fetch = function(input, init) {
     console.log('whatwgFetchWidthTimeout--->'+input, init);
+    init = init || {timeout:30000};
     return new Promise(function(resolve, reject) {
       var request
       if (Request.prototype.isPrototypeOf(input) && !init) {

@@ -1,8 +1,8 @@
 {
-  "name": "whatwg-fetch",
-  "description": "A window.fetch polyfill.",
-  "version": "1.0.0",
-  "main": "fetch.js",
+  "name": "whatwg-fetch-importable",
+  "description": "A window.fetch polyfill and importable module.",
+  "version": "1.0.2",
+  "main": "whatwgFetch.js",
   "repository": "github/fetch",
   "license": "MIT",
   "devDependencies": {

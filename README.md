@@ -9,13 +9,7 @@ possible to the standard Fetch specification at https://fetch.spec.whatwg.org.
 
 ## Installation
 
-Available on [Bower](http://bower.io) as **fetch**.
-
-```sh
-$ bower install fetch
-```
-
-You'll also need a Promise polyfill for [older browsers](http://caniuse.com/#feat=promises).
+You'll need a Promise polyfill for [older browsers](http://caniuse.com/#feat=promises).
 
 ```sh
 $ bower install es6-promise
@@ -24,7 +18,7 @@ $ bower install es6-promise
 This can also be installed with `npm`.
 
 ```sh
-$ npm install whatwg-fetch --save
+$ npm install whatwg-fetch-importable --save
 ```
 
 For a node.js implementation, try [node-fetch](https://github.com/bitinn/node-fetch).
@@ -40,6 +34,12 @@ For babel and es2015+, make sure to import the file:
 ```javascript
 import 'whatwg-fetch';
 fetch(...);
+```
+
+For non-polyfill use:
+```javascript
+import whatwgFetch from 'whatwg-fetch/whatwfFetch'
+whatwgFetch(...);
 ```
 
 ## Usage
