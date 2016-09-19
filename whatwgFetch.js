@@ -366,7 +366,7 @@ const whatwgFetch = (function(self) {
   // self.Response = Response
 
   var fetch = function(input, init) {
-    console.log('whatwgFetchWidthTimeout--->'+input, init);
+    // console.log('whatwgFetchWidthTimeout--->'+input, init);
     init = init || {timeout:30000};
     return new Promise(function(resolve, reject) {
       var request
@@ -406,12 +406,12 @@ const whatwgFetch = (function(self) {
         reject(new TypeError('Network request failed'))
       }
 
-      xhr.timeout = init.timeout || 30000;
       xhr.ontimeout = function() {
         reject(new TypeError('Network request failed due to timeout'))
       }
 
-      xhr.open(request.method, request.url, true)
+      xhr.open(request.method, request.url, true);
+      xhr.timeout = init.timeout || 30000;
 
       if (request.credentials === 'include') {
         xhr.withCredentials = true
